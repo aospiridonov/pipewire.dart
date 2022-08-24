@@ -1,0 +1,23 @@
+#dart run ffigen --config ffigen.yaml
+name: 'Pipewire'
+description: 'Bindings to Pipewire'
+output: 'lib/src/pipewire/generated_bindings.dart'
+headers:
+  entry-points:
+    - '/usr/include/pipewire-0.3/pipewire/pipewire.h'
+  include-directives:
+    - '**pipewire.h'
+    - '**array.h'
+
+compiler-opts:
+  - '-I/usr/include/pipewire-0.3/'
+  - '-I/usr/include/spa-0.2/'
+
+llvm-path:
+  - '/usr/lib/llvm-13/'
+  - '/Library/Developer/CommandLineTools/usr/'
+  - 'C:\Program Files\llv'
+
+comments:
+  style: any
+  length: full
