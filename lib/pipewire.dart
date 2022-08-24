@@ -1,3 +1,5 @@
-int calculate() {
-  return 6 * 7;
+import 'src/pipewire/generated_bindings.dart';
+
+void test() {
+  Pipewire pw;
 }

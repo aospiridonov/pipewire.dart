@@ -5,8 +5,8 @@ output: 'lib/src/pipewire/generated_bindings.dart'
 headers:
   entry-points:
     - '/usr/include/pipewire-0.3/pipewire/pipewire.h'
-    - '/usr/include/spa-0.2/spa/param/video/format-utils.h'
-    - '/usr/include/spa-0.2/spa/param/video/type-info.h'
+    #- '/usr/include/spa-0.2/spa/param/video/format-utils.h'
+    #- '/usr/include/spa-0.2/spa/param/video/type-info.h'
 
 compiler-opts:
   - '-I/usr/include/pipewire-0.3/'
@@ -22,4 +22,4 @@ comments:
   length: full
 
 preamble: |
-    // ignore_for_file: camel_case_types, non_constant_identifier_names, constant_identifier_names, no_leading_underscores_for_local_identifiers
+    // ignore_for_file: camel_case_types, non_constant_identifier_names, constant_identifier_names, no_leading_underscores_for_local_identifiers, library_private_types_in_public_api
