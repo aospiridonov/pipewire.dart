@@ -21,5 +21,12 @@ comments:
   style: any
   length: full
 
+functions:
+  exclude:
+    - _(.*)
+structs:
+  exclude:
+    - _(.*)
+
 preamble: |
     // ignore_for_file: camel_case_types, non_constant_identifier_names, constant_identifier_names, no_leading_underscores_for_local_identifiers, library_private_types_in_public_api

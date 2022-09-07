@@ -126,22 +126,6 @@ class Pipewire {
       int Function(ffi.Pointer<__gwchar_t>,
           ffi.Pointer<ffi.Pointer<__gwchar_t>>, int)>();
 
-  __sighandler_t __sysv_signal(
-    int __sig,
-    __sighandler_t __handler,
-  ) {
-    return ___sysv_signal(
-      __sig,
-      __handler,
-    );
-  }
-
-  late final ___sysv_signalPtr = _lookup<
-          ffi.NativeFunction<__sighandler_t Function(ffi.Int, __sighandler_t)>>(
-      '__sysv_signal');
-  late final ___sysv_signal = ___sysv_signalPtr
-      .asFunction<__sighandler_t Function(int, __sighandler_t)>();
-
   __sighandler_t signal(
     int __sig,
     __sighandler_t __handler,
@@ -603,36 +587,6 @@ class Pipewire {
           'pthread_kill');
   late final _pthread_kill =
       _pthread_killPtr.asFunction<int Function(int, int)>();
-
-  int __libc_current_sigrtmin() {
-    return ___libc_current_sigrtmin();
-  }
-
-  late final ___libc_current_sigrtminPtr =
-      _lookup<ffi.NativeFunction<ffi.Int Function()>>(
-          '__libc_current_sigrtmin');
-  late final ___libc_current_sigrtmin =
-      ___libc_current_sigrtminPtr.asFunction<int Function()>();
-
-  int __libc_current_sigrtmax() {
-    return ___libc_current_sigrtmax();
-  }
-
-  late final ___libc_current_sigrtmaxPtr =
-      _lookup<ffi.NativeFunction<ffi.Int Function()>>(
-          '__libc_current_sigrtmax');
-  late final ___libc_current_sigrtmax =
-      ___libc_current_sigrtmaxPtr.asFunction<int Function()>();
-
-  int __ctype_get_mb_cur_max() {
-    return ___ctype_get_mb_cur_max();
-  }
-
-  late final ___ctype_get_mb_cur_maxPtr =
-      _lookup<ffi.NativeFunction<ffi.Size Function()>>(
-          '__ctype_get_mb_cur_max');
-  late final ___ctype_get_mb_cur_max =
-      ___ctype_get_mb_cur_maxPtr.asFunction<int Function()>();
 
   double atof(
     ffi.Pointer<ffi.Char> __nptr,
@@ -1615,18 +1569,6 @@ class Pipewire {
       _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Int)>>('quick_exit');
   late final _quick_exit = _quick_exitPtr.asFunction<void Function(int)>();
 
-  void _Exit(
-    int __status,
-  ) {
-    return __Exit(
-      __status,
-    );
-  }
-
-  late final __ExitPtr =
-      _lookup<ffi.NativeFunction<ffi.Void Function(ffi.Int)>>('_Exit');
-  late final __Exit = __ExitPtr.asFunction<void Function(int)>();
-
   ffi.Pointer<ffi.Char> getenv(
     ffi.Pointer<ffi.Char> __name,
   ) {
@@ -2282,25 +2224,6 @@ class Pipewire {
   late final _memcmp = _memcmpPtr.asFunction<
       int Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Void>, int)>();
 
-  int __memcmpeq(
-    ffi.Pointer<ffi.Void> __s1,
-    ffi.Pointer<ffi.Void> __s2,
-    int __n,
-  ) {
-    return ___memcmpeq(
-      __s1,
-      __s2,
-      __n,
-    );
-  }
-
-  late final ___memcmpeqPtr = _lookup<
-      ffi.NativeFunction<
-          ffi.Int Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Void>,
-              ffi.Size)>>('__memcmpeq');
-  late final ___memcmpeq = ___memcmpeqPtr.asFunction<
-      int Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Void>, int)>();
-
   ffi.Pointer<ffi.Void> memchr(
     ffi.Pointer<ffi.Void> __s,
     int __c,
@@ -2662,28 +2585,6 @@ class Pipewire {
       ffi.Pointer<ffi.Char> Function(
           ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
-  ffi.Pointer<ffi.Char> __strtok_r(
-    ffi.Pointer<ffi.Char> __s,
-    ffi.Pointer<ffi.Char> __delim,
-    ffi.Pointer<ffi.Pointer<ffi.Char>> __save_ptr,
-  ) {
-    return ___strtok_r(
-      __s,
-      __delim,
-      __save_ptr,
-    );
-  }
-
-  late final ___strtok_rPtr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ffi.Char> Function(
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Pointer<ffi.Char>>)>>('__strtok_r');
-  late final ___strtok_r = ___strtok_rPtr.asFunction<
-      ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>,
-          ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Pointer<ffi.Char>>)>();
-
   ffi.Pointer<ffi.Char> strtok_r(
     ffi.Pointer<ffi.Char> __s,
     ffi.Pointer<ffi.Char> __delim,
@@ -3035,24 +2936,6 @@ class Pipewire {
   late final _strsignal =
       _strsignalPtr.asFunction<ffi.Pointer<ffi.Char> Function(int)>();
 
-  ffi.Pointer<ffi.Char> __stpcpy(
-    ffi.Pointer<ffi.Char> __dest,
-    ffi.Pointer<ffi.Char> __src,
-  ) {
-    return ___stpcpy(
-      __dest,
-      __src,
-    );
-  }
-
-  late final ___stpcpyPtr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ffi.Char> Function(
-              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('__stpcpy');
-  late final ___stpcpy = ___stpcpyPtr.asFunction<
-      ffi.Pointer<ffi.Char> Function(
-          ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
-
   ffi.Pointer<ffi.Char> stpcpy(
     ffi.Pointer<ffi.Char> __dest,
     ffi.Pointer<ffi.Char> __src,
@@ -3070,26 +2953,6 @@ class Pipewire {
   late final _stpcpy = _stpcpyPtr.asFunction<
       ffi.Pointer<ffi.Char> Function(
           ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
-
-  ffi.Pointer<ffi.Char> __stpncpy(
-    ffi.Pointer<ffi.Char> __dest,
-    ffi.Pointer<ffi.Char> __src,
-    int __n,
-  ) {
-    return ___stpncpy(
-      __dest,
-      __src,
-      __n,
-    );
-  }
-
-  late final ___stpncpyPtr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ffi.Char> Function(ffi.Pointer<ffi.Char>,
-              ffi.Pointer<ffi.Char>, ffi.Size)>>('__stpncpy');
-  late final ___stpncpy = ___stpncpyPtr.asFunction<
-      ffi.Pointer<ffi.Char> Function(
-          ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>, int)>();
 
   ffi.Pointer<ffi.Char> stpncpy(
     ffi.Pointer<ffi.Char> __dest,
@@ -4040,31 +3903,6 @@ class Pipewire {
       ffi.Pointer<ffi.Char> Function(
           ffi.Pointer<ffi.Char>, int, ffi.Pointer<FILE>)>();
 
-  int __getdelim(
-    ffi.Pointer<ffi.Pointer<ffi.Char>> __lineptr,
-    ffi.Pointer<ffi.Size> __n,
-    int __delimiter,
-    ffi.Pointer<FILE> __stream,
-  ) {
-    return ___getdelim(
-      __lineptr,
-      __n,
-      __delimiter,
-      __stream,
-    );
-  }
-
-  late final ___getdelimPtr = _lookup<
-      ffi.NativeFunction<
-          __ssize_t Function(
-              ffi.Pointer<ffi.Pointer<ffi.Char>>,
-              ffi.Pointer<ffi.Size>,
-              ffi.Int,
-              ffi.Pointer<FILE>)>>('__getdelim');
-  late final ___getdelim = ___getdelimPtr.asFunction<
-      int Function(ffi.Pointer<ffi.Pointer<ffi.Char>>, ffi.Pointer<ffi.Size>,
-          int, ffi.Pointer<FILE>)>();
-
   int getdelim(
     ffi.Pointer<ffi.Pointer<ffi.Char>> __lineptr,
     ffi.Pointer<ffi.Size> __n,
@@ -4553,36 +4391,6 @@ class Pipewire {
   late final _funlockfile =
       _funlockfilePtr.asFunction<void Function(ffi.Pointer<FILE>)>();
 
-  int __uflow(
-    ffi.Pointer<FILE> arg0,
-  ) {
-    return ___uflow(
-      arg0,
-    );
-  }
-
-  late final ___uflowPtr =
-      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>)>>(
-          '__uflow');
-  late final ___uflow =
-      ___uflowPtr.asFunction<int Function(ffi.Pointer<FILE>)>();
-
-  int __overflow(
-    ffi.Pointer<FILE> arg0,
-    int arg1,
-  ) {
-    return ___overflow(
-      arg0,
-      arg1,
-    );
-  }
-
-  late final ___overflowPtr =
-      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<FILE>, ffi.Int)>>(
-          '__overflow');
-  late final ___overflow =
-      ___overflowPtr.asFunction<int Function(ffi.Pointer<FILE>, int)>();
-
   /// The entry point in a plugin.
   ///
   /// \param factory a location to hold the factory result
@@ -4607,16 +4415,6 @@ class Pipewire {
   late final _spa_handle_factory_enum = _spa_handle_factory_enumPtr.asFunction<
       int Function(ffi.Pointer<ffi.Pointer<spa_handle_factory>>,
           ffi.Pointer<ffi.Uint32>)>();
-
-  ffi.Pointer<ffi.Int> __errno_location() {
-    return ___errno_location();
-  }
-
-  late final ___errno_locationPtr =
-      _lookup<ffi.NativeFunction<ffi.Pointer<ffi.Int> Function()>>(
-          '__errno_location');
-  late final ___errno_location =
-      ___errno_locationPtr.asFunction<ffi.Pointer<ffi.Int> Function()>();
 
   ffi.Pointer<pw_properties> pw_properties_new(
     ffi.Pointer<ffi.Char> key,
@@ -7843,27 +7641,6 @@ class Pipewire {
       void Function(int, ffi.Pointer<ffi.Char>, int, ffi.Pointer<ffi.Char>,
           ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
 
-  /// Initialize the log topic. The returned topic is owned by the pipewire
-  /// context and the topic must not be modified or freed.
-  /// Do not use this function directly, use one of PW_LOG_TOPIC_* instead.
-  ///
-  /// \see PW_LOG_TOPIC_STATIC
-  /// \see PW_LOG_TOPIC_EXTERN
-  /// \see PW_LOG_TOPIC
-  void _pw_log_topic_new(
-    ffi.Pointer<spa_log_topic> topic,
-  ) {
-    return __pw_log_topic_new(
-      topic,
-    );
-  }
-
-  late final __pw_log_topic_newPtr = _lookup<
-          ffi.NativeFunction<ffi.Void Function(ffi.Pointer<spa_log_topic>)>>(
-      '_pw_log_topic_new');
-  late final __pw_log_topic_new = __pw_log_topic_newPtr
-      .asFunction<void Function(ffi.Pointer<spa_log_topic>)>();
-
   /// Convert a \ref pw_link_state to a readable string
   ffi.Pointer<ffi.Char> pw_link_state_as_string(
     int state,
@@ -9899,11 +9676,6 @@ class Pipewire {
       .asFunction<int Function(ffi.Pointer<spa_handle>)>();
 }
 
-class __fsid_t extends ffi.Struct {
-  @ffi.Array.multi([2])
-  external ffi.Array<ffi.Int> __val;
-}
-
 class imaxdiv_t extends ffi.Struct {
   @ffi.Long()
   external int quot;
@@ -9917,11 +9689,6 @@ typedef __intmax_t = ffi.Long;
 typedef uintmax_t = __uintmax_t;
 typedef __uintmax_t = ffi.UnsignedLong;
 typedef __gwchar_t = ffi.Int;
-
-class __sigset_t extends ffi.Struct {
-  @ffi.Array.multi([16])
-  external ffi.Array<ffi.UnsignedLong> __val;
-}
 
 class timespec extends ffi.Struct {
   @__time_t()
@@ -10111,6 +9878,11 @@ typedef __sighandler_t
     = ffi.Pointer<ffi.NativeFunction<ffi.Void Function(ffi.Int)>>;
 typedef sigset_t = __sigset_t;
 
+class __sigset_t extends ffi.Struct {
+  @ffi.Array.multi([16])
+  external ffi.Array<ffi.UnsignedLong> __val;
+}
+
 class sigaction extends ffi.Struct {
   external UnnamedUnion4 __sigaction_handler;
 
@@ -10131,86 +9903,6 @@ class UnnamedUnion4 extends ffi.Union {
                   ffi.Int, ffi.Pointer<siginfo_t>, ffi.Pointer<ffi.Void>)>>
       sa_sigaction;
 }
-
-class _fpx_sw_bytes extends ffi.Struct {
-  @__uint32_t()
-  external int magic1;
-
-  @__uint32_t()
-  external int extended_size;
-
-  @__uint64_t()
-  external int xstate_bv;
-
-  @__uint32_t()
-  external int xstate_size;
-
-  @ffi.Array.multi([7])
-  external ffi.Array<__uint32_t> __glibc_reserved1;
-}
-
-typedef __uint64_t = ffi.UnsignedLong;
-
-class _fpreg extends ffi.Struct {
-  @ffi.Array.multi([4])
-  external ffi.Array<ffi.UnsignedShort> significand;
-
-  @ffi.UnsignedShort()
-  external int exponent;
-}
-
-class _fpxreg extends ffi.Struct {
-  @ffi.Array.multi([4])
-  external ffi.Array<ffi.UnsignedShort> significand;
-
-  @ffi.UnsignedShort()
-  external int exponent;
-
-  @ffi.Array.multi([3])
-  external ffi.Array<ffi.UnsignedShort> __glibc_reserved1;
-}
-
-class _xmmreg extends ffi.Struct {
-  @ffi.Array.multi([4])
-  external ffi.Array<__uint32_t> element;
-}
-
-class _fpstate extends ffi.Struct {
-  @__uint16_t()
-  external int cwd;
-
-  @__uint16_t()
-  external int swd;
-
-  @__uint16_t()
-  external int ftw;
-
-  @__uint16_t()
-  external int fop;
-
-  @__uint64_t()
-  external int rip;
-
-  @__uint64_t()
-  external int rdp;
-
-  @__uint32_t()
-  external int mxcsr;
-
-  @__uint32_t()
-  external int mxcr_mask;
-
-  @ffi.Array.multi([8])
-  external ffi.Array<_fpxreg> _st;
-
-  @ffi.Array.multi([16])
-  external ffi.Array<_xmmreg> _xmm;
-
-  @ffi.Array.multi([24])
-  external ffi.Array<__uint32_t> __glibc_reserved1;
-}
-
-typedef __uint16_t = ffi.UnsignedShort;
 
 class sigcontext extends ffi.Struct {
   @__uint64_t()
@@ -10295,29 +9987,7 @@ class sigcontext extends ffi.Struct {
   external ffi.Array<__uint64_t> __reserved1;
 }
 
-class _xsave_hdr extends ffi.Struct {
-  @__uint64_t()
-  external int xstate_bv;
-
-  @ffi.Array.multi([2])
-  external ffi.Array<__uint64_t> __glibc_reserved1;
-
-  @ffi.Array.multi([5])
-  external ffi.Array<__uint64_t> __glibc_reserved2;
-}
-
-class _ymmh_state extends ffi.Struct {
-  @ffi.Array.multi([64])
-  external ffi.Array<__uint32_t> ymmh_space;
-}
-
-class _xstate extends ffi.Struct {
-  external _fpstate fpstate;
-
-  external _xsave_hdr xstate_hdr;
-
-  external _ymmh_state ymmh;
-}
+typedef __uint64_t = ffi.UnsignedLong;
 
 class stack_t extends ffi.Struct {
   external ffi.Pointer<ffi.Void> ss_sp;
@@ -10329,21 +9999,18 @@ class stack_t extends ffi.Struct {
   external int ss_size;
 }
 
-class _libc_fpxreg extends ffi.Struct {
-  @ffi.Array.multi([4])
-  external ffi.Array<ffi.UnsignedShort> significand;
+class mcontext_t extends ffi.Struct {
+  @ffi.Array.multi([23])
+  external ffi.Array<greg_t> gregs;
 
-  @ffi.UnsignedShort()
-  external int exponent;
+  external fpregset_t fpregs;
 
-  @ffi.Array.multi([3])
-  external ffi.Array<ffi.UnsignedShort> __glibc_reserved1;
+  @ffi.Array.multi([8])
+  external ffi.Array<ffi.UnsignedLongLong> __reserved1;
 }
 
-class _libc_xmmreg extends ffi.Struct {
-  @ffi.Array.multi([4])
-  external ffi.Array<__uint32_t> element;
-}
+typedef greg_t = ffi.LongLong;
+typedef fpregset_t = ffi.Pointer<_libc_fpstate>;
 
 class _libc_fpstate extends ffi.Struct {
   @__uint16_t()
@@ -10380,18 +10047,23 @@ class _libc_fpstate extends ffi.Struct {
   external ffi.Array<__uint32_t> __glibc_reserved1;
 }
 
-class mcontext_t extends ffi.Struct {
-  @ffi.Array.multi([23])
-  external ffi.Array<greg_t> gregs;
+typedef __uint16_t = ffi.UnsignedShort;
 
-  external fpregset_t fpregs;
+class _libc_fpxreg extends ffi.Struct {
+  @ffi.Array.multi([4])
+  external ffi.Array<ffi.UnsignedShort> significand;
 
-  @ffi.Array.multi([8])
-  external ffi.Array<ffi.UnsignedLongLong> __reserved1;
+  @ffi.UnsignedShort()
+  external int exponent;
+
+  @ffi.Array.multi([3])
+  external ffi.Array<ffi.UnsignedShort> __glibc_reserved1;
 }
 
-typedef greg_t = ffi.LongLong;
-typedef fpregset_t = ffi.Pointer<_libc_fpstate>;
+class _libc_xmmreg extends ffi.Struct {
+  @ffi.Array.multi([4])
+  external ffi.Array<__uint32_t> element;
+}
 
 class ucontext_t extends ffi.Struct {
   @ffi.UnsignedLong()
@@ -10433,14 +10105,30 @@ class UnnamedStruct10 extends ffi.Struct {
   external int __high;
 }
 
-class __pthread_internal_list extends ffi.Struct {
-  external ffi.Pointer<__pthread_internal_list> __prev;
+class pthread_mutexattr_t extends ffi.Union {
+  @ffi.Array.multi([4])
+  external ffi.Array<ffi.Char> __size;
 
-  external ffi.Pointer<__pthread_internal_list> __next;
+  @ffi.Int()
+  external int __align;
 }
 
-class __pthread_internal_slist extends ffi.Struct {
-  external ffi.Pointer<__pthread_internal_slist> __next;
+class pthread_condattr_t extends ffi.Union {
+  @ffi.Array.multi([4])
+  external ffi.Array<ffi.Char> __size;
+
+  @ffi.Int()
+  external int __align;
+}
+
+class pthread_mutex_t extends ffi.Union {
+  external __pthread_mutex_s __data;
+
+  @ffi.Array.multi([40])
+  external ffi.Array<ffi.Char> __size;
+
+  @ffi.Long()
+  external int __align;
 }
 
 class __pthread_mutex_s extends ffi.Struct {
@@ -10469,6 +10157,53 @@ class __pthread_mutex_s extends ffi.Struct {
 }
 
 typedef __pthread_list_t = __pthread_internal_list;
+
+class __pthread_internal_list extends ffi.Struct {
+  external ffi.Pointer<__pthread_internal_list> __prev;
+
+  external ffi.Pointer<__pthread_internal_list> __next;
+}
+
+class pthread_cond_t extends ffi.Union {
+  external __pthread_cond_s __data;
+
+  @ffi.Array.multi([48])
+  external ffi.Array<ffi.Char> __size;
+
+  @ffi.LongLong()
+  external int __align;
+}
+
+class __pthread_cond_s extends ffi.Struct {
+  external __atomic_wide_counter __wseq;
+
+  external __atomic_wide_counter __g1_start;
+
+  @ffi.Array.multi([2])
+  external ffi.Array<ffi.UnsignedInt> __g_refs;
+
+  @ffi.Array.multi([2])
+  external ffi.Array<ffi.UnsignedInt> __g_size;
+
+  @ffi.UnsignedInt()
+  external int __g1_orig_size;
+
+  @ffi.UnsignedInt()
+  external int __wrefs;
+
+  @ffi.Array.multi([2])
+  external ffi.Array<ffi.UnsignedInt> __g_signals;
+}
+
+class pthread_rwlock_t extends ffi.Union {
+  external __pthread_rwlock_arch_t __data;
+
+  @ffi.Array.multi([56])
+  external ffi.Array<ffi.Char> __size;
+
+  @ffi.Long()
+  external int __align;
+}
 
 class __pthread_rwlock_arch_t extends ffi.Struct {
   @ffi.UnsignedInt()
@@ -10506,78 +10241,6 @@ class __pthread_rwlock_arch_t extends ffi.Struct {
 
   @ffi.UnsignedInt()
   external int __flags;
-}
-
-class __pthread_cond_s extends ffi.Struct {
-  external __atomic_wide_counter __wseq;
-
-  external __atomic_wide_counter __g1_start;
-
-  @ffi.Array.multi([2])
-  external ffi.Array<ffi.UnsignedInt> __g_refs;
-
-  @ffi.Array.multi([2])
-  external ffi.Array<ffi.UnsignedInt> __g_size;
-
-  @ffi.UnsignedInt()
-  external int __g1_orig_size;
-
-  @ffi.UnsignedInt()
-  external int __wrefs;
-
-  @ffi.Array.multi([2])
-  external ffi.Array<ffi.UnsignedInt> __g_signals;
-}
-
-class __once_flag extends ffi.Struct {
-  @ffi.Int()
-  external int __data;
-}
-
-class pthread_mutexattr_t extends ffi.Union {
-  @ffi.Array.multi([4])
-  external ffi.Array<ffi.Char> __size;
-
-  @ffi.Int()
-  external int __align;
-}
-
-class pthread_condattr_t extends ffi.Union {
-  @ffi.Array.multi([4])
-  external ffi.Array<ffi.Char> __size;
-
-  @ffi.Int()
-  external int __align;
-}
-
-class pthread_mutex_t extends ffi.Union {
-  external __pthread_mutex_s __data;
-
-  @ffi.Array.multi([40])
-  external ffi.Array<ffi.Char> __size;
-
-  @ffi.Long()
-  external int __align;
-}
-
-class pthread_cond_t extends ffi.Union {
-  external __pthread_cond_s __data;
-
-  @ffi.Array.multi([48])
-  external ffi.Array<ffi.Char> __size;
-
-  @ffi.LongLong()
-  external int __align;
-}
-
-class pthread_rwlock_t extends ffi.Union {
-  external __pthread_rwlock_arch_t __data;
-
-  @ffi.Array.multi([56])
-  external ffi.Array<ffi.Char> __size;
-
-  @ffi.Long()
-  external int __align;
 }
 
 class pthread_rwlockattr_t extends ffi.Union {
@@ -10686,6 +10349,8 @@ class drand48_data extends ffi.Struct {
 typedef __compar_fn_t = ffi.Pointer<
     ffi.NativeFunction<
         ffi.Int Function(ffi.Pointer<ffi.Void>, ffi.Pointer<ffi.Void>)>>;
+typedef locale_t = __locale_t;
+typedef __locale_t = ffi.Pointer<__locale_struct>;
 
 class __locale_struct extends ffi.Struct {
   @ffi.Array.multi([13])
@@ -10703,43 +10368,9 @@ class __locale_struct extends ffi.Struct {
 
 class __locale_data extends ffi.Opaque {}
 
-typedef locale_t = __locale_t;
-typedef __locale_t = ffi.Pointer<__locale_struct>;
-
 class max_align_t extends ffi.Opaque {}
 
-class __mbstate_t extends ffi.Struct {
-  @ffi.Int()
-  external int __count;
-
-  external UnnamedUnion5 __value;
-}
-
-class UnnamedUnion5 extends ffi.Union {
-  @ffi.UnsignedInt()
-  external int __wch;
-
-  @ffi.Array.multi([4])
-  external ffi.Array<ffi.Char> __wchb;
-}
-
-class _G_fpos_t extends ffi.Struct {
-  @__off_t()
-  external int __pos;
-
-  external __mbstate_t __state;
-}
-
-typedef __off_t = ffi.Long;
-
-class _G_fpos64_t extends ffi.Struct {
-  @__off64_t()
-  external int __pos;
-
-  external __mbstate_t __state;
-}
-
-typedef __off64_t = ffi.Long;
+typedef FILE = _IO_FILE;
 
 class _IO_FILE extends ffi.Struct {
   @ffi.Int()
@@ -10814,13 +10445,13 @@ class _IO_FILE extends ffi.Struct {
 
 class _IO_marker extends ffi.Opaque {}
 
+typedef __off_t = ffi.Long;
 typedef _IO_lock_t = ffi.Void;
+typedef __off64_t = ffi.Long;
 
 class _IO_codecvt extends ffi.Opaque {}
 
 class _IO_wide_data extends ffi.Opaque {}
-
-typedef FILE = _IO_FILE;
 
 class __va_list_tag extends ffi.Struct {
   @ffi.UnsignedInt()
@@ -10837,6 +10468,28 @@ class __va_list_tag extends ffi.Struct {
 typedef __ssize_t = ffi.Long;
 typedef fpos_t = __fpos_t;
 typedef __fpos_t = _G_fpos_t;
+
+class _G_fpos_t extends ffi.Struct {
+  @__off_t()
+  external int __pos;
+
+  external __mbstate_t __state;
+}
+
+class __mbstate_t extends ffi.Struct {
+  @ffi.Int()
+  external int __count;
+
+  external UnnamedUnion5 __value;
+}
+
+class UnnamedUnion5 extends ffi.Union {
+  @ffi.UnsignedInt()
+  external int __wch;
+
+  @ffi.Array.multi([4])
+  external ffi.Array<ffi.Char> __wchb;
+}
 
 abstract class spa_direction {
   static const int SPA_DIRECTION_INPUT = 0;
@@ -15469,6 +15122,8 @@ const int _FEATURES_H = 1;
 
 const int _DEFAULT_SOURCE = 1;
 
+const int __GLIBC_USE_ISOC2X = 1;
+
 const int __USE_ISOC11 = 1;
 
 const int __USE_ISOC99 = 1;
@@ -15499,6 +15154,8 @@ const int __WORDSIZE_TIME64_COMPAT32 = 1;
 
 const int __SYSCALL_WORDSIZE = 64;
 
+const int __TIMESIZE = 64;
+
 const int __USE_MISC = 1;
 
 const int __USE_ATFILE = 1;
@@ -15506,6 +15163,8 @@ const int __USE_ATFILE = 1;
 const int __USE_FORTIFY_LEVEL = 0;
 
 const int __GLIBC_USE_DEPRECATED_GETS = 0;
+
+const int __GLIBC_USE_DEPRECATED_SCANF = 0;
 
 const int _STDC_PREDEF_H = 1;
 
@@ -15519,7 +15178,7 @@ const int __GNU_LIBRARY__ = 6;
 
 const int __GLIBC__ = 2;
 
-const int __GLIBC_MINOR__ = 27;
+const int __GLIBC_MINOR__ = 31;
 
 const int _SYS_CDEFS_H = 1;
 
@@ -15533,7 +15192,11 @@ const int __GLIBC_USE_LIB_EXT2 = 1;
 
 const int __GLIBC_USE_IEC_60559_BFP_EXT = 1;
 
+const int __GLIBC_USE_IEC_60559_BFP_EXT_C2X = 1;
+
 const int __GLIBC_USE_IEC_60559_FUNCS_EXT = 1;
+
+const int __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X = 1;
 
 const int __GLIBC_USE_IEC_60559_TYPES_EXT = 1;
 
@@ -15547,7 +15210,11 @@ const int __INO_T_MATCHES_INO64_T = 1;
 
 const int __RLIM_T_MATCHES_RLIM64_T = 1;
 
+const int __STATFS_MATCHES_STATFS64 = 1;
+
 const int __FD_SETSIZE = 1024;
+
+const int _BITS_TIME64_H = 1;
 
 const int _BITS_WCHAR_H = 1;
 
@@ -16059,11 +15726,15 @@ const int _SIGSET_NWORDS = 16;
 
 const int _STRUCT_TIMESPEC = 1;
 
+const int _BITS_ENDIAN_H = 1;
+
 const int __LITTLE_ENDIAN = 1234;
 
 const int __BIG_ENDIAN = 4321;
 
 const int __PDP_ENDIAN = 3412;
+
+const int _BITS_ENDIANNESS_H = 1;
 
 const int __BYTE_ORDER = 1234;
 
@@ -16088,6 +15759,8 @@ const int _BITS_SIGINFO_CONSTS_H = 1;
 const int __SI_ASYNCIO_AFTER_SIGIO = 1;
 
 const int SI_ASYNCNL1 = -60;
+
+const int SI_DETHREAD1 = -7;
 
 const int SI_TKILL1 = -6;
 
@@ -16121,6 +15794,8 @@ const int ILL_COPROC1 = 7;
 
 const int ILL_BADSTK1 = 8;
 
+const int ILL_BADIADDR1 = 9;
+
 const int FPE_INTDIV1 = 1;
 
 const int FPE_INTOVF1 = 2;
@@ -16137,6 +15812,10 @@ const int FPE_FLTINV1 = 7;
 
 const int FPE_FLTSUB1 = 8;
 
+const int FPE_FLTUNK1 = 14;
+
+const int FPE_CONDTRAP1 = 15;
+
 const int SEGV_MAPERR1 = 1;
 
 const int SEGV_ACCERR1 = 2;
@@ -16144,6 +15823,12 @@ const int SEGV_ACCERR1 = 2;
 const int SEGV_BNDERR1 = 3;
 
 const int SEGV_PKUERR1 = 4;
+
+const int SEGV_ACCADI1 = 5;
+
+const int SEGV_ADIDERR1 = 6;
+
+const int SEGV_ADIPERR1 = 7;
 
 const int BUS_ADRALN1 = 1;
 
@@ -16198,6 +15883,8 @@ const int SIGEV_THREAD1 = 2;
 const int SIGEV_THREAD_ID1 = 4;
 
 const int NSIG = 65;
+
+const int _BITS_SIGACTION_H = 1;
 
 const int SA_NOCLDSTOP = 1;
 
@@ -16281,6 +15968,8 @@ const int __SIZEOF_PTHREAD_RWLOCKATTR_T = 8;
 
 const int __SIZEOF_PTHREAD_BARRIERATTR_T = 4;
 
+const int _THREAD_MUTEX_INTERNAL_H = 1;
+
 const int __PTHREAD_MUTEX_HAVE_PREV = 1;
 
 const int __PTHREAD_RWLOCK_ELISION_EXTRA = 0;
@@ -16343,6 +16032,8 @@ const int __HAVE_DISTINCT_FLOAT64X = 0;
 
 const int __HAVE_DISTINCT_FLOAT128X = 0;
 
+const int __HAVE_FLOAT128_UNLIKE_LDBL = 0;
+
 const int __HAVE_FLOATN_NOT_TYPEDEF = 0;
 
 const int __ldiv_t_defined = 1;
@@ -16403,11 +16094,17 @@ const int _STDIO_H = 1;
 
 const int __GNUC_VA_LIST = 1;
 
+const int _____fpos_t_defined = 1;
+
 const int ____mbstate_t_defined = 1;
+
+const int _____fpos64_t_defined = 1;
 
 const int ____FILE_defined = 1;
 
 const int __FILE_defined = 1;
+
+const int __struct_FILE_defined = 1;
 
 const int _IO_EOF_SEEN = 16;
 
