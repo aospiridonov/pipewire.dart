@@ -1397,25 +1397,6 @@ class Pipewire {
   late final _reallocarray = _reallocarrayPtr.asFunction<
       ffi.Pointer<ffi.Void> Function(ffi.Pointer<ffi.Void>, int, int)>();
 
-  ffi.Pointer<ffi.Void> reallocarray1(
-    ffi.Pointer<ffi.Void> __ptr,
-    int __nmemb,
-    int __size,
-  ) {
-    return _reallocarray1(
-      __ptr,
-      __nmemb,
-      __size,
-    );
-  }
-
-  late final _reallocarray1Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Pointer<ffi.Void> Function(
-              ffi.Pointer<ffi.Void>, ffi.Size, ffi.Size)>>('reallocarray');
-  late final _reallocarray1 = _reallocarray1Ptr.asFunction<
-      ffi.Pointer<ffi.Void> Function(ffi.Pointer<ffi.Void>, int, int)>();
-
   ffi.Pointer<ffi.Void> alloca(
     int __size,
   ) {
@@ -3534,54 +3515,6 @@ class Pipewire {
   late final _sscanf = _sscanfPtr
       .asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
 
-  int fscanf1(
-    ffi.Pointer<FILE> __stream,
-    ffi.Pointer<ffi.Char> __format,
-  ) {
-    return _fscanf1(
-      __stream,
-      __format,
-    );
-  }
-
-  late final _fscanf1Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Int Function(
-              ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>>('fscanf');
-  late final _fscanf1 = _fscanf1Ptr
-      .asFunction<int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>)>();
-
-  int scanf1(
-    ffi.Pointer<ffi.Char> __format,
-  ) {
-    return _scanf1(
-      __format,
-    );
-  }
-
-  late final _scanf1Ptr =
-      _lookup<ffi.NativeFunction<ffi.Int Function(ffi.Pointer<ffi.Char>)>>(
-          'scanf');
-  late final _scanf1 =
-      _scanf1Ptr.asFunction<int Function(ffi.Pointer<ffi.Char>)>();
-
-  int sscanf1(
-    ffi.Pointer<ffi.Char> __s,
-    ffi.Pointer<ffi.Char> __format,
-  ) {
-    return _sscanf1(
-      __s,
-      __format,
-    );
-  }
-
-  late final _sscanf1Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Int Function(
-              ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>>('sscanf');
-  late final _sscanf1 = _sscanf1Ptr
-      .asFunction<int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>)>();
-
   int vfscanf(
     ffi.Pointer<FILE> __s,
     ffi.Pointer<ffi.Char> __format,
@@ -3636,63 +3569,6 @@ class Pipewire {
           ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>,
               ffi.Pointer<__va_list_tag>)>>('vsscanf');
   late final _vsscanf = _vsscanfPtr.asFunction<
-      int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>,
-          ffi.Pointer<__va_list_tag>)>();
-
-  int vfscanf1(
-    ffi.Pointer<FILE> __s,
-    ffi.Pointer<ffi.Char> __format,
-    ffi.Pointer<__va_list_tag> __arg,
-  ) {
-    return _vfscanf1(
-      __s,
-      __format,
-      __arg,
-    );
-  }
-
-  late final _vfscanf1Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>,
-              ffi.Pointer<__va_list_tag>)>>('vfscanf');
-  late final _vfscanf1 = _vfscanf1Ptr.asFunction<
-      int Function(ffi.Pointer<FILE>, ffi.Pointer<ffi.Char>,
-          ffi.Pointer<__va_list_tag>)>();
-
-  int vscanf1(
-    ffi.Pointer<ffi.Char> __format,
-    ffi.Pointer<__va_list_tag> __arg,
-  ) {
-    return _vscanf1(
-      __format,
-      __arg,
-    );
-  }
-
-  late final _vscanf1Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Int Function(
-              ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>>('vscanf');
-  late final _vscanf1 = _vscanf1Ptr.asFunction<
-      int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<__va_list_tag>)>();
-
-  int vsscanf1(
-    ffi.Pointer<ffi.Char> __s,
-    ffi.Pointer<ffi.Char> __format,
-    ffi.Pointer<__va_list_tag> __arg,
-  ) {
-    return _vsscanf1(
-      __s,
-      __format,
-      __arg,
-    );
-  }
-
-  late final _vsscanf1Ptr = _lookup<
-      ffi.NativeFunction<
-          ffi.Int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>,
-              ffi.Pointer<__va_list_tag>)>>('vsscanf');
-  late final _vsscanf1 = _vsscanf1Ptr.asFunction<
       int Function(ffi.Pointer<ffi.Char>, ffi.Pointer<ffi.Char>,
           ffi.Pointer<__va_list_tag>)>();
 

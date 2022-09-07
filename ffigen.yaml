@@ -17,32 +17,37 @@ llvm-path:
   - '/Library/Developer/CommandLineTools/usr/'
   - 'C:\Program Files\llv'
 
+compiler-opts-automatic:
+  linux:
+    include-c-standard-library: false
+
 comments:
   style: any
   length: full
 
 functions:
   exclude:
-    - _(.*)
+    - _+(.*)
 
 structs:
   exclude:
-    - _(.*)
+    - _+(.*)
 
 enums:
   exclude:
-    - _(.*)
+    - _+(.*)
+
 unions:
   exclude:
-    - _(.*)
+    - _+(.*)
+    
 unnamed-enums:
   exclude:
-    - _(.*)
-    - _(.*)
+    - _+(.*)
 
 globals:
   exclude:
-    - _(.*)
+    - _+(.*)
     - aGlobal
 
 preamble: |
