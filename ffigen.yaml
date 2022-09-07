@@ -17,10 +17,6 @@ llvm-path:
   - '/Library/Developer/CommandLineTools/usr/'
   - 'C:\Program Files\llv'
 
-compiler-opts-automatic:
-  linux:
-    include-c-standard-library: false
-
 comments:
   style: any
   length: full
@@ -38,6 +34,10 @@ enums:
     - _+(.*)
 
 unions:
+  exclude:
+    - _+(.*)
+
+macros:
   exclude:
     - _+(.*)
     

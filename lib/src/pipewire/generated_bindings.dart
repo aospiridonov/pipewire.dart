@@ -14959,118 +14959,6 @@ const int true1 = 1;
 
 const int false1 = 0;
 
-const int __bool_true_false_are_defined = 1;
-
-const int _INTTYPES_H = 1;
-
-const int _FEATURES_H = 1;
-
-const int _DEFAULT_SOURCE = 1;
-
-const int __GLIBC_USE_ISOC2X = 1;
-
-const int __USE_ISOC11 = 1;
-
-const int __USE_ISOC99 = 1;
-
-const int __USE_ISOC95 = 1;
-
-const int _POSIX_SOURCE = 1;
-
-const int _POSIX_C_SOURCE = 200809;
-
-const int __USE_POSIX = 1;
-
-const int __USE_POSIX2 = 1;
-
-const int __USE_POSIX199309 = 1;
-
-const int __USE_POSIX199506 = 1;
-
-const int __USE_XOPEN2K = 1;
-
-const int __USE_XOPEN2K8 = 1;
-
-const int _ATFILE_SOURCE = 1;
-
-const int __WORDSIZE = 64;
-
-const int __WORDSIZE_TIME64_COMPAT32 = 1;
-
-const int __SYSCALL_WORDSIZE = 64;
-
-const int __TIMESIZE = 64;
-
-const int __USE_MISC = 1;
-
-const int __USE_ATFILE = 1;
-
-const int __USE_FORTIFY_LEVEL = 0;
-
-const int __GLIBC_USE_DEPRECATED_GETS = 0;
-
-const int __GLIBC_USE_DEPRECATED_SCANF = 0;
-
-const int _STDC_PREDEF_H = 1;
-
-const int __STDC_IEC_559__ = 1;
-
-const int __STDC_IEC_559_COMPLEX__ = 1;
-
-const int __STDC_ISO_10646__ = 201706;
-
-const int __GNU_LIBRARY__ = 6;
-
-const int __GLIBC__ = 2;
-
-const int __GLIBC_MINOR__ = 31;
-
-const int _SYS_CDEFS_H = 1;
-
-const int __glibc_c99_flexarr_available = 1;
-
-const int __HAVE_GENERIC_SELECTION = 0;
-
-const int _STDINT_H = 1;
-
-const int __GLIBC_USE_LIB_EXT2 = 1;
-
-const int __GLIBC_USE_IEC_60559_BFP_EXT = 1;
-
-const int __GLIBC_USE_IEC_60559_BFP_EXT_C2X = 1;
-
-const int __GLIBC_USE_IEC_60559_FUNCS_EXT = 1;
-
-const int __GLIBC_USE_IEC_60559_FUNCS_EXT_C2X = 1;
-
-const int __GLIBC_USE_IEC_60559_TYPES_EXT = 1;
-
-const int _BITS_TYPES_H = 1;
-
-const int _BITS_TYPESIZES_H = 1;
-
-const int __OFF_T_MATCHES_OFF64_T = 1;
-
-const int __INO_T_MATCHES_INO64_T = 1;
-
-const int __RLIM_T_MATCHES_RLIM64_T = 1;
-
-const int __STATFS_MATCHES_STATFS64 = 1;
-
-const int __FD_SETSIZE = 1024;
-
-const int _BITS_TIME64_H = 1;
-
-const int _BITS_WCHAR_H = 1;
-
-const int __WCHAR_MAX = 2147483647;
-
-const int __WCHAR_MIN = -2147483648;
-
-const int _BITS_STDINT_INTN_H = 1;
-
-const int _BITS_STDINT_UINTN_H = 1;
-
 const int INT8_MIN = -128;
 
 const int INT16_MIN = -32768;
@@ -15172,12 +15060,6 @@ const int WCHAR_MAX = 2147483647;
 const int WINT_MIN = 0;
 
 const int WINT_MAX = 4294967295;
-
-const int ____gwchar_t_defined = 1;
-
-const String __PRI64_PREFIX = 'l';
-
-const String __PRIPTR_PREFIX = 'l';
 
 const String PRId8 = 'd';
 
@@ -15487,8 +15369,6 @@ const String SCNuPTR = 'lu';
 
 const String SCNxPTR = 'lx';
 
-const int _BITS_SIGNUM_GENERIC_H = 1;
-
 const int SIGINT = 2;
 
 const int SIGILL = 4;
@@ -15556,52 +15436,6 @@ const int SIGUSR1 = 10;
 const int SIGUSR2 = 12;
 
 const int SIGWINCH = 28;
-
-const int __SIGRTMIN = 32;
-
-const int __SIGRTMAX = 64;
-
-const int _NSIG = 65;
-
-const int __sig_atomic_t_defined = 1;
-
-const int __sigset_t_defined = 1;
-
-const int _SIGSET_NWORDS = 16;
-
-const int _STRUCT_TIMESPEC = 1;
-
-const int _BITS_ENDIAN_H = 1;
-
-const int __LITTLE_ENDIAN = 1234;
-
-const int __BIG_ENDIAN = 4321;
-
-const int __PDP_ENDIAN = 3412;
-
-const int _BITS_ENDIANNESS_H = 1;
-
-const int __BYTE_ORDER = 1234;
-
-const int __FLOAT_WORD_ORDER = 1234;
-
-const int __time_t_defined = 1;
-
-const int __siginfo_t_defined = 1;
-
-const int __SI_MAX_SIZE = 128;
-
-const int __SI_PAD_SIZE = 28;
-
-const int _BITS_SIGINFO_ARCH_H = 1;
-
-const int __SI_ERRNO_THEN_CODE = 1;
-
-const int __SI_HAVE_SIGSYS = 1;
-
-const int _BITS_SIGINFO_CONSTS_H = 1;
-
-const int __SI_ASYNCIO_AFTER_SIGIO = 1;
 
 const int SI_ASYNCNL1 = -60;
 
@@ -15709,16 +15543,6 @@ const int POLL_PRI1 = 5;
 
 const int POLL_HUP1 = 6;
 
-const int __sigevent_t_defined = 1;
-
-const int __SIGEV_MAX_SIZE = 64;
-
-const int __SIGEV_PAD_SIZE = 12;
-
-const int __have_pthread_attr_t = 1;
-
-const int _BITS_SIGEVENT_CONSTS_H = 1;
-
 const int SIGEV_SIGNAL1 = 0;
 
 const int SIGEV_NONE1 = 1;
@@ -15728,8 +15552,6 @@ const int SIGEV_THREAD1 = 2;
 const int SIGEV_THREAD_ID1 = 4;
 
 const int NSIG = 65;
-
-const int _BITS_SIGACTION_H = 1;
 
 const int SA_NOCLDSTOP = 1;
 
@@ -15759,71 +15581,23 @@ const int SIG_UNBLOCK = 1;
 
 const int SIG_SETMASK = 2;
 
-const int _BITS_SIGCONTEXT_H = 1;
-
 const int FP_XSTATE_MAGIC1 = 1179670611;
 
 const int FP_XSTATE_MAGIC2 = 1179670597;
 
 const int FP_XSTATE_MAGIC2_SIZE = 4;
 
-const int __stack_t_defined = 1;
-
-const int _SYS_UCONTEXT_H = 1;
-
-const int __NGREG = 23;
-
 const int NGREG = 23;
-
-const int _BITS_SIGSTACK_H = 1;
 
 const int MINSIGSTKSZ = 2048;
 
 const int SIGSTKSZ = 8192;
 
-const int _BITS_SS_FLAGS_H = 1;
-
 const int SS_ONSTACK1 = 1;
 
 const int SS_DISABLE1 = 2;
 
-const int __sigstack_defined = 1;
-
-const int _BITS_PTHREADTYPES_COMMON_H = 1;
-
-const int _THREAD_SHARED_TYPES_H = 1;
-
-const int _BITS_PTHREADTYPES_ARCH_H = 1;
-
-const int __SIZEOF_PTHREAD_MUTEX_T = 40;
-
-const int __SIZEOF_PTHREAD_ATTR_T = 56;
-
-const int __SIZEOF_PTHREAD_RWLOCK_T = 56;
-
-const int __SIZEOF_PTHREAD_BARRIER_T = 32;
-
-const int __SIZEOF_PTHREAD_MUTEXATTR_T = 4;
-
-const int __SIZEOF_PTHREAD_COND_T = 48;
-
-const int __SIZEOF_PTHREAD_CONDATTR_T = 4;
-
-const int __SIZEOF_PTHREAD_RWLOCKATTR_T = 8;
-
-const int __SIZEOF_PTHREAD_BARRIERATTR_T = 4;
-
-const int _THREAD_MUTEX_INTERNAL_H = 1;
-
-const int __PTHREAD_MUTEX_HAVE_PREV = 1;
-
-const int __PTHREAD_RWLOCK_ELISION_EXTRA = 0;
-
-const int _BITS_SIGTHREAD_H = 1;
-
 const int NULL = 0;
-
-const int _STDLIB_H = 1;
 
 const int WNOHANG = 1;
 
@@ -15837,71 +15611,11 @@ const int WCONTINUED = 8;
 
 const int WNOWAIT = 16777216;
 
-const int __WNOTHREAD = 536870912;
-
-const int __WALL = 1073741824;
-
-const int __WCLONE = 2147483648;
-
-const int __W_CONTINUED = 65535;
-
-const int __WCOREFLAG = 128;
-
-const int __HAVE_FLOAT128 = 0;
-
-const int __HAVE_DISTINCT_FLOAT128 = 0;
-
-const int __HAVE_FLOAT64X = 1;
-
-const int __HAVE_FLOAT64X_LONG_DOUBLE = 1;
-
-const int __HAVE_FLOAT16 = 0;
-
-const int __HAVE_FLOAT32 = 1;
-
-const int __HAVE_FLOAT64 = 1;
-
-const int __HAVE_FLOAT32X = 1;
-
-const int __HAVE_FLOAT128X = 0;
-
-const int __HAVE_DISTINCT_FLOAT16 = 0;
-
-const int __HAVE_DISTINCT_FLOAT32 = 0;
-
-const int __HAVE_DISTINCT_FLOAT64 = 0;
-
-const int __HAVE_DISTINCT_FLOAT32X = 0;
-
-const int __HAVE_DISTINCT_FLOAT64X = 0;
-
-const int __HAVE_DISTINCT_FLOAT128X = 0;
-
-const int __HAVE_FLOAT128_UNLIKE_LDBL = 0;
-
-const int __HAVE_FLOATN_NOT_TYPEDEF = 0;
-
-const int __ldiv_t_defined = 1;
-
-const int __lldiv_t_defined = 1;
-
 const int RAND_MAX = 2147483647;
 
 const int EXIT_FAILURE = 1;
 
 const int EXIT_SUCCESS = 0;
-
-const int _SYS_TYPES_H = 1;
-
-const int __clock_t_defined = 1;
-
-const int __clockid_t_defined = 1;
-
-const int __timer_t_defined = 1;
-
-const int __BIT_TYPES_DEFINED__ = 1;
-
-const int _ENDIAN_H = 1;
 
 const int LITTLE_ENDIAN = 1234;
 
@@ -15911,57 +15625,9 @@ const int PDP_ENDIAN = 3412;
 
 const int BYTE_ORDER = 1234;
 
-const int _BITS_BYTESWAP_H = 1;
-
-const int _BITS_UINTN_IDENTITY_H = 1;
-
-const int _SYS_SELECT_H = 1;
-
-const int __timeval_defined = 1;
-
-const int __NFDBITS = 64;
-
 const int FD_SETSIZE = 1024;
 
 const int NFDBITS = 64;
-
-const int _ALLOCA_H = 1;
-
-const int _STRING_H = 1;
-
-const int _BITS_TYPES_LOCALE_T_H = 1;
-
-const int _BITS_TYPES___LOCALE_T_H = 1;
-
-const int _STRINGS_H = 1;
-
-const int _STDIO_H = 1;
-
-const int __GNUC_VA_LIST = 1;
-
-const int _____fpos_t_defined = 1;
-
-const int ____mbstate_t_defined = 1;
-
-const int _____fpos64_t_defined = 1;
-
-const int ____FILE_defined = 1;
-
-const int __FILE_defined = 1;
-
-const int __struct_FILE_defined = 1;
-
-const int _IO_EOF_SEEN = 16;
-
-const int _IO_ERR_SEEN = 32;
-
-const int _IO_USER_LOCK = 32768;
-
-const int _IOFBF = 0;
-
-const int _IOLBF = 1;
-
-const int _IONBF = 2;
 
 const int BUFSIZ = 8192;
 
@@ -15974,8 +15640,6 @@ const int SEEK_CUR = 1;
 const int SEEK_END = 2;
 
 const String P_tmpdir = '/tmp';
-
-const int _BITS_STDIO_LIM_H = 1;
 
 const int L_tmpnam = 20;
 
@@ -16022,10 +15686,6 @@ const String SPA_KEY_FACTORY_DESCRIPTION = 'factory.description';
 const String SPA_KEY_FACTORY_USAGE = 'factory.usage';
 
 const String SPA_KEY_LIBRARY_NAME = 'library.name';
-
-const int _ERRNO_H = 1;
-
-const int _BITS_ERRNO_H = 1;
 
 const int EPERM = 1;
 
@@ -16381,10 +16041,6 @@ const int PW_REGISTRY_METHOD_NUM = 3;
 
 const int PW_VERSION_REGISTRY_METHODS = 0;
 
-const int _TIME_H = 1;
-
-const int _BITS_TIME_H = 1;
-
 const int CLOCKS_PER_SEC = 1000000;
 
 const int CLOCK_REALTIME = 0;
@@ -16410,10 +16066,6 @@ const int CLOCK_BOOTTIME_ALARM = 9;
 const int CLOCK_TAI = 11;
 
 const int TIMER_ABSTIME = 1;
-
-const int __struct_tm_defined = 1;
-
-const int __itimerspec_defined = 1;
 
 const int TIME_UTC = 1;
 
@@ -16467,14 +16119,6 @@ const int SPA_VERSION_LOOP_CONTROL_METHODS = 0;
 const int SPA_VERSION_LOOP_UTILS_METHODS = 0;
 
 const int PW_VERSION_CONTEXT_EVENTS = 0;
-
-const int _SYS_UN_H = 1;
-
-const int _BITS_SOCKADDR_H = 1;
-
-const int __SOCKADDR_COMMON_SIZE = 2;
-
-const int _SS_SIZE = 128;
 
 const String SPA_TYPE_INFO_BASE = 'Spa:';
 
