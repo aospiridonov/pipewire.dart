@@ -37,6 +37,8 @@ class Pipewire {
     return '';
   }
 
+// Initializing PipeWire and loading SPA modules.
+
   /// Get the program name.
   String get programName =>
       _ffiLibBindings.pw_get_prgname().cast<Utf8>().toDartString();
@@ -68,7 +70,26 @@ class Pipewire {
     return _ffiLibBindings.pw_direction_reverse(direction);
   }
 
+  int setDomain(String domain) {
+    return _ffiLibBindings
+        .pw_set_domain(domain.toNativeUtf8().cast<ffi.Char>());
+  }
+
+  String get domain =>
+      _ffiLibBindings.pw_get_domain().cast<Utf8>().toDartString();
+
+  // FIX: add pw_get_support, pw_load_spa_handle, pw_unload_spa_handle
+
   /// Get the currently running version.
   String get version =>
       _ffiLibBindings.pw_get_library_version().cast<Utf8>().toDartString();
+
+  // FIX: pw_gettext, pw_ngettext
+
+// FIX: cant visible pw_type_info
+/*
+  pw.spa_type_info get typeInfo {
+    return pw.pw_type_info();
+  }
+  */
 }
