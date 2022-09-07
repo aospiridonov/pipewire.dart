@@ -5417,27 +5417,6 @@ class Pipewire {
       ffi.Pointer<ffi.Char> Function(
           ffi.Pointer<time_t>, ffi.Pointer<ffi.Char>)>();
 
-  late final ffi.Pointer<ffi.Pointer<ffi.Pointer<ffi.Char>>> ___tzname =
-      _lookup<ffi.Pointer<ffi.Pointer<ffi.Char>>>('__tzname');
-
-  ffi.Pointer<ffi.Pointer<ffi.Char>> get __tzname => ___tzname.value;
-
-  set __tzname(ffi.Pointer<ffi.Pointer<ffi.Char>> value) =>
-      ___tzname.value = value;
-
-  late final ffi.Pointer<ffi.Int> ___daylight = _lookup<ffi.Int>('__daylight');
-
-  int get __daylight => ___daylight.value;
-
-  set __daylight(int value) => ___daylight.value = value;
-
-  late final ffi.Pointer<ffi.Long> ___timezone =
-      _lookup<ffi.Long>('__timezone');
-
-  int get __timezone => ___timezone.value;
-
-  set __timezone(int value) => ___timezone.value = value;
-
   late final ffi.Pointer<ffi.Pointer<ffi.Pointer<ffi.Char>>> _tzname =
       _lookup<ffi.Pointer<ffi.Pointer<ffi.Char>>>('tzname');
 
@@ -10090,21 +10069,6 @@ class sigstack extends ffi.Struct {
   external int ss_onstack;
 }
 
-class __atomic_wide_counter extends ffi.Union {
-  @ffi.UnsignedLongLong()
-  external int __value64;
-
-  external UnnamedStruct10 __value32;
-}
-
-class UnnamedStruct10 extends ffi.Struct {
-  @ffi.UnsignedInt()
-  external int __low;
-
-  @ffi.UnsignedInt()
-  external int __high;
-}
-
 class pthread_mutexattr_t extends ffi.Union {
   @ffi.Array.multi([4])
   external ffi.Array<ffi.Char> __size;
@@ -10193,6 +10157,21 @@ class __pthread_cond_s extends ffi.Struct {
 
   @ffi.Array.multi([2])
   external ffi.Array<ffi.UnsignedInt> __g_signals;
+}
+
+class __atomic_wide_counter extends ffi.Union {
+  @ffi.UnsignedLongLong()
+  external int __value64;
+
+  external UnnamedStruct10 __value32;
+}
+
+class UnnamedStruct10 extends ffi.Struct {
+  @ffi.UnsignedInt()
+  external int __low;
+
+  @ffi.UnsignedInt()
+  external int __high;
 }
 
 class pthread_rwlock_t extends ffi.Union {
@@ -15048,8 +15027,6 @@ const int SPA_TYPE_Choice = 19;
 
 const int SPA_TYPE_Pod = 20;
 
-const int _SPA_TYPE_LAST = 21;
-
 const int SPA_TYPE_POINTER_START = 65536;
 
 const int SPA_TYPE_POINTER_Buffer = 65537;
@@ -15058,23 +15035,17 @@ const int SPA_TYPE_POINTER_Meta = 65538;
 
 const int SPA_TYPE_POINTER_Dict = 65539;
 
-const int _SPA_TYPE_POINTER_LAST = 65540;
-
 const int SPA_TYPE_EVENT_START = 131072;
 
 const int SPA_TYPE_EVENT_Device = 131073;
 
 const int SPA_TYPE_EVENT_Node = 131074;
 
-const int _SPA_TYPE_EVENT_LAST = 131075;
-
 const int SPA_TYPE_COMMAND_START = 196608;
 
 const int SPA_TYPE_COMMAND_Device = 196609;
 
 const int SPA_TYPE_COMMAND_Node = 196610;
-
-const int _SPA_TYPE_COMMAND_LAST = 196611;
 
 const int SPA_TYPE_OBJECT_START = 262144;
 
@@ -15101,8 +15072,6 @@ const int SPA_TYPE_OBJECT_Profiler = 262154;
 const int SPA_TYPE_OBJECT_ParamLatency = 262155;
 
 const int SPA_TYPE_OBJECT_ParamProcessLatency = 262156;
-
-const int _SPA_TYPE_OBJECT_LAST = 262157;
 
 const int SPA_TYPE_VENDOR_PipeWire = 33554432;
 
