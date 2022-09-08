@@ -1,0 +1,65 @@
+#dart run ffigen --config ffigen_spa.yaml
+name: 'SPA'
+description: 'Bindings to SPA'
+output: 'lib/src/spa/generated_bindings.dart'
+headers:
+  entry-points:
+    - '/usr/include/spa-0.2/spa/param/video/format-utils.h'
+    - '/usr/include/spa-0.2/spa/param/video/type-info.h'
+  #include-directives:
+  #  - '/usr/include/spa-0.2/spa/*'
+    
+header-filter:
+  exclude:
+    - 'stdint.h'
+    - 'stdio.h'
+    - 'stdlib.h'
+    - 'assert.h'
+
+compiler-opts:
+  - '-I/usr/include/pipewire-0.3/'
+  - '-I/usr/include/spa-0.2/'
+
+llvm-path:
+  - '/usr/lib/llvm-13/'
+  - '/Library/Developer/CommandLineTools/usr/'
+  - 'C:\Program Files\llv'
+
+comments:
+  style: any
+  length: full
+
+functions:
+  exclude:
+    - _+(.*)
+
+structs:
+  exclude:
+    - _+(.*)
+
+enums:
+  exclude:
+    - _+(.*)
+
+unions:
+  exclude:
+    - _+(.*)
+
+macros:
+  exclude:
+    - _+(.*)
+
+typedefs:
+  exclude:
+    - _+(.*)
+
+unnamed-enums:
+  exclude:
+    - _+(.*)
+
+globals:
+  exclude:
+    - _+(.*)
+
+preamble: |
+    // ignore_for_file: camel_case_types, non_constant_identifier_names, constant_identifier_names, no_leading_underscores_for_local_identifiers, library_private_types_in_public_api
