@@ -1,4 +1,4 @@
-#dart run ffigen --config ffigen.yaml
+#dart run ffigen --config ffigen_pipewire.yaml
 name: 'Pipewire'
 description: 'Bindings to Pipewire'
 output: 'lib/src/pipewire/generated_bindings.dart'

@@ -87,9 +87,50 @@ class Pipewire {
   // FIX: pw_gettext, pw_ngettext
 
 // FIX: cant visible pw_type_info
-/*
+
   pw.spa_type_info get typeInfo {
-    return pw.pw_type_info();
+    final value = _ffiLibBindings.pw_type_info().ref;
+    final name = value.name;
+    final lname = name.cast<Utf8>().toDartString();
+    print('name: $lname');
+    return value;
   }
-  */
+
+  ffi.Pointer<pw.pw_main_loop> mainLoopNew() {
+    //FIX: props
+    ffi.Pointer<pw.spa_dict> props =
+        ffi.Pointer.fromAddress(0).cast<pw.spa_dict>();
+       return _ffiLibBindings.pw_main_loop_new(props);
+  }
+
+  ffi.Pointer<pw.pw_loop> mainLoopGetLoop(
+      ffi.Pointer<pw.pw_main_loop> mainLoop) {
+    return _ffiLibBindings.pw_main_loop_get_loop(mainLoop);
+  }
+
+  ffi.Pointer<pw.pw_properties> propertiesNew() {
+    //FIX: add args
+    String key =
+        '${pw.PW_KEY_MEDIA_TYPE} Video ${pw.PW_KEY_MEDIA_CATEGORY} Capture ${pw.PW_KEY_MEDIA_ROLE} Camera';
+    return _ffiLibBindings.pw_properties_new(key.toNativeUtf8().cast());
+  }
+
+  ffi.Pointer<pw.pw_stream_events> streamEvents() {
+    return calloc<pw.pw_stream_events>();
+  }
+
+  ffi.Pointer<pw.pw_stream> propertiesNewSample(
+      ffi.Pointer<pw.pw_loop> loop,
+      String name,
+      ffi.Pointer<pw.pw_properties> props,
+      ffi.Pointer<pw.pw_stream_events> events,
+      ffi.Pointer<ffi.Void> data) {
+    return _ffiLibBindings.pw_stream_new_simple(
+      loop,
+      name.toNativeUtf8().cast(),
+      props,
+      events,
+      data,
+    );
+  }
 }
