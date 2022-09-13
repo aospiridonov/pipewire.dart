@@ -1,18 +1,19 @@
 import 'dart:ffi';
 
 import 'package:pipewire/pipewire.dart';
-import 'package:pipewire/src/spa/generated_bindings.dart';
 
 void main(List<String> args) async {
   Pipewire pw = Pipewire();
   print('app name: ${pw.appName}');
   print('library version: ${pw.version}');
   // Spa spa = Spa();
+
   test();
 }
 
 void test() {
   Pipewire pw = Pipewire();
+  pw.init();
   //Spa spa = Spa();
   final data = Data();
   data.loop = pw.mainLoopNew();
