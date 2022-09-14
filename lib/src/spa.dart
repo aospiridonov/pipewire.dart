@@ -5,12 +5,6 @@ import 'dart:ffi' as ffi;
 import './spa/generated_bindings.dart' as spa;
 import './pipewire/generated_bindings.dart' as pw;
 
-class Data {
-  ffi.Pointer<pw.pw_main_loop>? loop = null;
-  ffi.Pointer<pw.pw_stream>? stream = null;
-  spa.spa_video_format? format = null;
-}
-
 class Spa {
   late final spa.SPA _ffiLibBindings;
 
@@ -28,4 +22,3 @@ class Spa {
 
   void test() {}
 }
-

@@ -100,7 +100,7 @@ class Pipewire {
     //FIX: props
     ffi.Pointer<pw.spa_dict> props =
         ffi.Pointer.fromAddress(0).cast<pw.spa_dict>();
-       return _ffiLibBindings.pw_main_loop_new(props);
+    return _ffiLibBindings.pw_main_loop_new(props);
   }
 
   ffi.Pointer<pw.pw_loop> mainLoopGetLoop(
@@ -109,10 +109,26 @@ class Pipewire {
   }
 
   ffi.Pointer<pw.pw_properties> propertiesNew() {
-    //FIX: add args
-    String key =
-        '${pw.PW_KEY_MEDIA_TYPE} Video ${pw.PW_KEY_MEDIA_CATEGORY} Capture ${pw.PW_KEY_MEDIA_ROLE} Camera';
-    return _ffiLibBindings.pw_properties_new(key.toNativeUtf8().cast());
+    return _ffiLibBindings.pw_properties_new(''.toNativeUtf8().cast());
+  }
+
+  ffi.Pointer<pw.pw_properties> propertiesNewDict(
+      [Map<String, String> dict = const <String, String>{}]) {
+    ffi.Pointer<pw.spa_dict> spaDict = calloc<pw.spa_dict>();
+    ffi.Pointer<pw.spa_dict_item> items = malloc.allocate<pw.spa_dict_item>(
+        ffi.sizeOf<pw.spa_dict_item>() * dict.length);
+    int i = 0;
+    for (final entry in dict.entries) {
+      final item = items.elementAt(i++);
+      item.ref.key = entry.key.toNativeUtf8().cast<ffi.Char>();
+      item.ref.value = entry.value.toNativeUtf8().cast<ffi.Char>();
+    }
+    spaDict.ref.items = items;
+    spaDict.ref.n_items = dict.length;
+    final result = _ffiLibBindings.pw_properties_new_dict(spaDict);
+    malloc.free(items);
+    malloc.free(spaDict);
+    return result;
   }
 
   ffi.Pointer<pw.pw_stream_events> streamEvents() {
