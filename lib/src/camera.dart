@@ -27,6 +27,19 @@ class Camera {
     print('library version: ${_pw.version}');
   }
 
+  static void onProcess(ffi.Pointer<ffi.Void> userdata) {
+    print('onProcess');
+  }
+
+  void onProcess2(ffi.Pointer<ffi.Void> userdata) {
+    print('onProcess2');
+  }
+
+  static void onParamChanged(
+      ffi.Pointer<ffi.Void> userdata, int id, ffi.Pointer<pw.spa_pod> param) {
+    print('onParamChanged');
+  }
+
   void init() {
     _pw.init();
     _data.loop = _pw.mainLoopNew();
@@ -38,6 +51,15 @@ class Camera {
     final loop = _pw.mainLoopGetLoop(_data.loop!);
     final events = _pw.streamEvents();
     print('streamEvents');
+
+    events.ref.param_changed =
+        ffi.Pointer.fromFunction<NativeParamChanged>(onParamChanged);
+
+    events.ref.process = ffi.Pointer.fromFunction<NativeProcess>(onProcess);
+
+    //TODO: Closures and tear-offs are not supported because they can capture context.
+    //events.ref.process = ffi.Pointer.fromFunction<NativeProcess>(onProcess2);
+
     _pw.propertiesNewSample(
       loop,
       'video-capture',
@@ -47,10 +69,6 @@ class Camera {
     );
     print('propertiesNewSample');
   }
-
-  void onProcess() {}
-
-  void onParamChanged() {}
 
   void _freeData() {
     if (_data.loop != null) {
@@ -71,3 +89,8 @@ class Camera {
     calloc.free(_props);
   }
 }
+
+typedef NativeParamChanged = ffi.Void Function(
+    ffi.Pointer<ffi.Void>, ffi.Uint32, ffi.Pointer<pw.spa_pod>);
+typedef NativeProcess = ffi.Void Function(ffi.Pointer<ffi.Void>);
+typedef Process = void Function(ffi.Pointer<ffi.Void>);

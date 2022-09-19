@@ -6,10 +6,11 @@ import './pipewire/generated_bindings.dart' as pw;
 
 class Pipewire {
   late final pw.Pipewire _ffiLibBindings;
+  late final ffi.DynamicLibrary dynamicLibrary;
 
   Pipewire() {
     final path = 'libpipewire-0.3.so';
-    final dynamicLibrary = ffi.DynamicLibrary.open(path);
+    dynamicLibrary = ffi.DynamicLibrary.open(path);
     _ffiLibBindings = pw.Pipewire(dynamicLibrary);
   }
 
